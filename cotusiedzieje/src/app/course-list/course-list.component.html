@@ -1,0 +1,34 @@
+<p>course-list works!</p>
+
+<ul class="courses">
+    <li *ngFor="let course of courses"
+      [class.selected]="course === selectedCourse"
+      (click)="onSelect(course)">
+      <span class="badge">{{course.id}}</span> {{course.name}}
+      <p> {{course.ects}}</p>
+      <div *ngIf="selectedCourse && selectedCourse.id == course.id">
+          <h2>{{selectedCourse.name | uppercase}} Details</h2>
+          <div><span>id: </span>{{selectedCourse.id}}</div>
+          <div>
+            <label>name:
+              <input [(ngModel)]="selectedCourse.name" placeholder="name"/>
+            </label>
+          </div>
+        
+        </div>
+    </li>
+  </ul>
+
+  <div class="container mt-2 mb-5">
+      <div class="row ">
+        <app-course
+          class="col-2 mt-4"
+          *ngFor="let course of courses"
+          [course]="course"
+          (selectedCourse)="onSelect($event)"
+        >
+      </app-course>
+      </div>
+    </div>
+
+    <app-course-details [course]="selectedCourse"></app-course-details>
