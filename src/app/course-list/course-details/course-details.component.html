@@ -6,10 +6,12 @@
     </button>
   </div>
   <div class="modal-body">
-    <ul>
+    <!-- <ul>
       <li *ngFor="let data in course">
         {{data}}: {{course[data]}}
       </li>
-    </ul>
+    </ul> -->
   </div>
+  <a routerLink="edit-course/{{id}}"> Edit Course</a>
+  <a routerLink="remove-course/{{id}}"> Remove Course</a>
 </ng-template>
