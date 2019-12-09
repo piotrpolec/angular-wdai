@@ -1,24 +1,31 @@
-import { Component, OnInit, Input, TemplateRef } from '@angular/core';
-import {Course} from 'src/app/models/course.model';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { Component, OnInit, Input, TemplateRef, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { Course } from 'src/app/models/course.model';
+// import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ModalDirective } from 'ngx-bootstrap';
+
 
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.css']
+  styleUrls: ['./course-details.component.css'],
 })
-export class CourseDetailsComponent implements OnInit {
+export class CourseDetailsComponent implements OnInit, OnChanges {
   @Input() course: Course;
-  modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { 
-  }
+  @ViewChild('modal', {static: false}) public modal: ModalDirective;
+  constructor() {}
 
   ngOnInit() {
 
   }
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
+  hide() {
+    this.modal.hide();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.course) {
+      this.modal.show();
+    }
   }
 
 }

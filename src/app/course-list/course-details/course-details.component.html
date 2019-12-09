@@ -1,17 +1,15 @@
-<ng-template #template *ngIf="course">
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Course Details</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div bsModal class="modal fade" #modal="bs-modal" tabindex="-1">
+    <div  class="modal-header">
+      <h4 class="modal-title pull-left">Course Details</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li *ngFor="let data of course | keyvalue">
+          {{data.key}}: {{data.value}}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="modal-body">
-    <!-- <ul>
-      <li *ngFor="let data in course">
-        {{data}}: {{course[data]}}
-      </li>
-    </ul> -->
-  </div>
-  <a routerLink="edit-course/{{id}}"> Edit Course</a>
-  <a routerLink="remove-course/{{id}}"> Remove Course</a>
-</ng-template>
