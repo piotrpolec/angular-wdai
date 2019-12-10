@@ -1,4 +1,4 @@
-<p>course-list works!</p>
+<!-- <p>course-list works!</p>
 
 <ul class="courses">
     <li *ngFor="let course of courses"
@@ -17,7 +17,7 @@
 
         </div>
     </li>
-  </ul>
+  </ul> -->
 
   <div class="container mt-2 mb-5">
       <div class="row ">
@@ -26,6 +26,7 @@
           *ngFor="let course of courses"
           [course]="course"
           (selectedCourse)="onSelect($event)"
+          (removedCourse)="onRemoveCourse($event)"
         >
       </app-course>
       </div>

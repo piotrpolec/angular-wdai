@@ -73,7 +73,7 @@ export class CourseService {
   }
 
   removeCourse(id: number){
-    let index = this.courses.indexOf(this.courses.find(course => course.id = id))
+    let index = this.courses.indexOf(this.courses.find(course => course.id == id))
     this.courses.splice(index, 1)
   }
   
@@ -132,6 +132,258 @@ export class Courses {
           id: 5,
           firstname: "Mickey",
           lastname: "Mouse",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Po",
+      description: "fajny kurs",
+      ects: 2,
+      semester: 1,
+      type: "Lecture",
+      rating: 4,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "WDAI",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "WDI",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "ASD",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 10,
+      name: "ALgebra",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 6,
+      name: "Rurki",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 7,
+      name: "Imperatywne",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 8,
+      name: "Funkcyjne",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        }
+      ]
+    },
+    {
+      id: 9,
+      name: "Dyskretna",
+      description: "fajny kurs",
+      ects: 1,
+      semester: 1,
+      type: "Lecture",
+      rating: 3,
+      no_of_students: 1,
+      imageUrl:
+        "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      teachers: [
+        {
+          id: 1,
+          firstname: "Walter",
+          lastname: "White",
+          imageUrl:
+            "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
+        },
+        {
+          id: 2,
+          firstname: "Walter",
+          lastname: "White",
           imageUrl:
             "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/35/1600x1600/square_ustv-breaking-bad-season-2-pictures-4.jpg?crop=0.874xw:0.874xh;0,0.126xh&resize=480:*"
         }

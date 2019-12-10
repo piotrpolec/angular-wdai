@@ -9,7 +9,7 @@ import { Course } from '../../models/course.model';
 export class CourseComponent implements OnInit {
   @Input() course: Course;
   @Output() selectedCourse: EventEmitter<Course> = new EventEmitter();
-  
+  @Output() removedCourse: EventEmitter<Course> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -18,5 +18,7 @@ export class CourseComponent implements OnInit {
   onSelect(): void {
     this.selectedCourse.emit(this.course)
   }
-
+  onRemoveCourse(): void {
+    this.removedCourse.emit(this.course)
+  }
 }

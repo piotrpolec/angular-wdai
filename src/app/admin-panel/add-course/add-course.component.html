@@ -1,1 +1,55 @@
-<p>add-course works!</p>
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control"  placeholder="Name" />
+    <span *ngIf="formErrors.name">{{ formErrors.name}}</span>
+  </div>
+
+  <div class="form-group">
+  <label for="ects">ECTS</label>
+  <input type="number" id="ects" formControlName="ects" class="form-control" placeholder="2"/>
+  <span *ngIf="formErrors.ects">{{ formErrors.ects}}</span>
+  </div>
+
+  <div class="form-group">
+      <label for="semester">Semester</label>
+      <input type="number" id="semester" formControlName="semester" class="form-control"  placeholder="3"/>
+      <span *ngIf="formErrors.semester">{{ formErrors.semester}}</span>
+  </div>
+
+  <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" id="type" formControlName="type" class="form-control"  placeholder="Laby"/>
+      <span *ngIf="formErrors.type">{{ formErrors.type}}</span>
+  </div>
+
+  <div class="form-group">
+      <label for="imageUrl"> Image URL</label>
+      <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control"  placeholder="https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687"/>
+      <span *ngIf="formErrors.imageUrl">{{ formErrors.imageUrl}}</span>
+  </div>
+
+  <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" formControlName="description" class="form-control" placeholder="Description"/>
+      <span *ngIf="formErrors.imageUrl">{{ formErrors.imageUrl}}</span>
+  </div>
+
+  <div class="form-group">
+      <label for="no_of_students">Number of students</label>
+      <input type="number" id="no_of_students" formControlName="no_of_students" class="form-control" placeholder="15"/>
+      <span *ngIf="formErrors.no_of_students">{{ formErrors.no_of_students}}</span>
+  </div>
+
+  <button
+  class="btn btn-success"
+  type="submit"
+  [disabled]="!modelForm.valid"
+  >
+  Add
+  </button>
+  <button class="btn btn-danger" type="button" (click)="onCancel()">
+    Cancel
+  </button>
+</form>

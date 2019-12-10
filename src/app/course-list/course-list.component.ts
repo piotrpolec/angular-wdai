@@ -10,7 +10,6 @@ import { Course } from '../models/course.model';
 export class CourseListComponent implements OnInit {
   courses: Course[];
   selectedCourse: Course;
-
   constructor(private courseService: CourseService) { }
   
   getCourses(): void {
@@ -24,5 +23,11 @@ export class CourseListComponent implements OnInit {
   onSelect(course: Course): void {
     this.selectedCourse = course;
   }
+
+  onRemoveCourse(removedCourse: Course): void {
+    this.courseService.removeCourse(removedCourse.id)
+  }
+
+
 
 }

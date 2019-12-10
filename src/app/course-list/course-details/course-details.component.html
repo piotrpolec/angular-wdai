@@ -10,6 +10,12 @@
         <li *ngFor="let data of course | keyvalue">
           {{data.key}}: {{data.value}}
         </li>
+        <!-- <li>  -->
+          <!-- <button class = "btn btn-secondary" [routerLink]="['edit-course', course.id]"> Edit Course</button> -->
+        <!-- </li> -->
+        <li>
+          <button class = "btn btn-danger" (click)="onRemoveCourse(course.id)"> Remove Course WIP</button>
+        </li>
       </ul>
     </div>
   </div>

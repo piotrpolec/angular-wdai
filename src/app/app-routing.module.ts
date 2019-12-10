@@ -25,7 +25,8 @@ const routes: Routes = [
     { path: "remove-teacher/:id", component: RemoveTeacherComponent },
     { path: "edit-teacher/:id", component: EditTeacherComponent }
   ]
-}];
+},
+{ path: "add-course", component: AddCourseComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

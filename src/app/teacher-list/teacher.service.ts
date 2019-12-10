@@ -5,9 +5,6 @@ import { Teacher } from '../models/teacher.model';
   providedIn: 'root'
 })
 export class TeacherService {
-  static getTeachers() {
-    throw new Error("Method not implemented.");
-  }
 
   constructor() { }
   teachers: Teacher[] = [
@@ -42,7 +39,8 @@ export class TeacherService {
       // telephone: "123123123"
     }
   ]
-  getTeachers() {
+
+  getTeachers(){
     return this.teachers;
   }
 }
